@@ -1,4 +1,57 @@
 # ut-docker-cli-ps-linux
+# Abstract: 
+
+The here described Universal Tasks allows operate your docker container and schedule docker container-based applications as part of any 
+existing or new scheduling workflow.   
+
+# 1	Disclaimer
+
+No support and no warranty are provided by Stonebranch GmbH for this document and the related Universal Task. The use of this document 
+and the related Universal Task is on your own risk.
+
+Before using this task in a production system, please perform extensive testing.
+Stonebranch GmbH assumes no liability for damage caused by the performance of the Universal Tasks
+
+# 2	Scope 
+This document provides a documentation how to install and use the Universal Tasks for docker container. If more Task will be created in 
+the future this document will be updated accordingly.  
+
+# 3	Introduction
+Universal Automation Center seamlessly integrates your legacy system into your container-based DevOps process without the need to re-
+design your business process logic, resulting in a shorter time-to-market, improved customer satisfaction, better product quality, more 
+reliable releases, improved productivity and efficiency. As a result, you can make use of all the benefits provided by containers like 
+portability from applications, **simplified integration, optimized development, increased scalability** and **performance**, while at the same 
+time minimizing the risk while introducing a new technology.
+
+Security is an important topic, when working with Containers. Containers are more or less isolated from the host OS system, but they use 
+the same kernel. Due to potential security risks a Container should be executed in most cases using a non-privileged user account. In 
+some cases, it might however be needed to use some kernel functionalities e.g. when mounting e.g. a USB drive. Universal Automation 
+Center allows to centrally maintain individual credentials for each container and provides to start a container using the –privileged 
+flag where needed. 
+
+***Central Management of all user and groups** with support for SAML, SSL LDAP/AD for legacy and containerized applications
+
+**Central Management of all Application Credentials and Connections** e.g. SAP and Database connections, script credentials...
+
+**Central Management of all credentials used to connect to a registry**
+
+Our security concept is constantly validated by external BSI certified security companies 
+
+Some details about the universal tasks for docker container:
+-	The here described Universal Tasks are calling the native docker cli. Universal Tasks based on the docker python SDK will be described 
+in a separate document.   
+-	Currently the most important docker cli commands have been implemented. Any missing command can be provided on request or created by 
+the user itself based on an existing task. 
+-	The current Universal Task require a Linux Agent for running the Universal Tasks scripts
+-	The docker private- and public registry are support. Other registries can be added with minimal efforts.
+-	Credentials can be provided for each task individually e.g. docker login, user executing the container, you can pass credentials for 
+applications running in the container, .. 
+-	You can select different log-levels e.g. debug
+
+Note: 
+For details on each docker cli command refer to the docker documentation: 
+
+https://docs.docker.com/engine/reference/commandline/docker/
 
 
 # 4	Installation
